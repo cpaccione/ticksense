@@ -21,13 +21,16 @@
                 <h1 class="blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
             </div>
             <div class="clear"></div>
-            <p>
-                By <?php the_author(); ?>
-                on <?php echo the_time('l, F jS, Y');?>
-                in <?php the_category( ', ' ); ?>.
-                <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
-            </p>
-            <p><?php the_excerpt(); ?><p>
+
+            <article>
+                <p>
+                    By <?php the_author(); ?>
+                    on <?php echo the_time('l, F jS, Y');?>
+                    in <?php the_category( ', ' ); ?>.
+                    <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
+                </p>
+                <p><?php the_excerpt(); ?><p>
+            </article>
             <hr>
             <?php comments_template(); ?>
 
