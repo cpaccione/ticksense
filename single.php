@@ -26,7 +26,7 @@
                 in <?php the_category( ', ' ); ?>.
                 <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
             </p>
-            <p><?php the_excerpt(); ?><p>
+            <p><?php the_content(); ?><p>
             <hr>
             <?php comments_template(); ?>
 
