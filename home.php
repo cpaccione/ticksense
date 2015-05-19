@@ -20,6 +20,7 @@
                 <img class="blog-image" src="<?php bloginfo('stylesheet_directory');?>/images/blog_post_logo.png">
                 <h1 class="blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
             </div>
+            <div class="clear"></div>
             <p>
                 By <?php the_author(); ?>
                 on <?php echo the_time('l, F jS, Y');?>

@@ -5,7 +5,7 @@
         <div class="col-md-9">
 
             <div class="page-header">
-              <h1><?php wp_title(''); ?></h1>
+              <h1><?php wp_title(''); ?> Blog Posts</h1>
             </div>
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
