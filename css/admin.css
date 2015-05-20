@@ -1,0 +1,11 @@
+#header-logo {
+	background-image: url(images/transparent_logo.jpg) !important;
+}
+
+#wpadminbar, #adminmenuback, #adminmenuwrap, #adminmenu {
+	background-color: #012b3b !important;
+}
+
+.wp-submenu, .wp-submenu-wrap {
+	background-color: #2b6e88 !important;
+}

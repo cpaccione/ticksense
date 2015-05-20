@@ -61,4 +61,49 @@ create_widget( 'Front Page Right', 'front-right', 'Displays on the right of the 
 create_widget( 'Page Sidebar', 'page', 'Displays on the side of the pages with a sidebar' );
 create_widget( 'Blog Sidebar', 'blog', 'Displays on the side of pages in the blog section' );
 
+//* Replace WordPress login logo
+add_action('login_head', 'b3m_custom_login_logo');
+function b3m_custom_login_logo() {
+    echo '<style type="text/css">
+    h1 a { background-image:url('.get_stylesheet_directory_uri().'/images/transparent_logo.png) !important; background-size: cover !important; margin-bottom: 10x !important; padding-bottom: 0px !important; }
+    .login form { margin-top: 10px !important; }
+    #wp-submit {background-color: #1d5b79 !important;}
+    </style>';
+}
+
+//Change Welcome Message
+add_filter('gettext', 'change_howdy', 10, 3);
+ 
+function change_howdy($translated, $text, $domain) {
+ 
+    if (!is_admin() || 'default' != $domain)
+        return $translated;
+ 
+    if (false !== strpos($translated, 'Howdy'))
+        return str_replace('Howdy', 'Welcome', $translated);
+ 
+    return $translated;
+}
+
+//Change footer message
+function change_footer_admin () { 
+  echo ''; 
+} 
+ 
+add_filter('admin_footer_text', 'change_footer_admin');
+
+
+
+ 
+function admin_css() {/*Replace WP Logo*/echo '';}
+add_action('admin_head','admin_css');
+
+// Custom WordPress Admin Color Scheme
+wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/css/admin.css' );
+add_action('admin_print_styles', 'admin_css' );
+
+
+
+
+
 ?>
