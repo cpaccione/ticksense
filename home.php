@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-md-12">
         <div class="featured-blogs">
-            <img class="img-responsive center-block" src="<?php bloginfo('stylesheet_directory');?>/images/featured_post_placeholder.jpg" alt="featured posts ticksense">
+            <img class="img-responsive center-block" src=<?php display_image();?>
         </div>
     </div>
 </div>
