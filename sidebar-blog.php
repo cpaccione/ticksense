@@ -14,11 +14,19 @@
 
 	<?php if ( ! dynamic_sidebar( 'blog') ): ?>
 
-		<h3 class='sidebarTitle'>Categories</h3>		
-		<p class='center'>Categories Go Here</p>
-		<p class='center'>Categories Go Here</p>
-		<p class='center'>Categories Go Here</p>
-		<p class='center'>Categories Go Here</p>
+		<h3 class='sidebarTitle'>Categories</h3>	
+	<?php	
+		$args = array(
+		  'orderby' => 'name',
+		  'order' => 'ASC'
+		  );
+		$categories = get_categories($args);
+		  foreach($categories as $category) { 
+		    echo '<p class="center"><a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'('.$category->count.') </a></p> ';}
+		    // echo '<p> Description:'. $category->description . '</p>';
+		    // echo '<p> Post Count: '. $category->count . '</p>';  } 
+	?>	
+
  
 		<h3 class='sidebarTitle'>Twitter Feed</h3>
 		<p><a class="twitter-timeline" href="https://twitter.com/TickSense_" data-widget-id="601097397859549185">Tweets by @TickSense_</a>
