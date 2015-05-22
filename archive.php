@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="container">
+
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-8">
 
             <div class="page-header">
               <h1><?php wp_title(''); ?> Blog Posts</h1>
@@ -37,7 +37,11 @@
 
     </div>
 
+    <div class="col-md-4">
+
     <?php get_sidebar( 'blog' ); ?>
+
+    </div>
 
     </div>
 
