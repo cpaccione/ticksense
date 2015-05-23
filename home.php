@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-md-12">
         <div class="featured-blogs">
-            <img class="img-responsive center-block" src=<?php display_image();?>
+            <img class="img-responsive center-block" <?php display_image();?>
         </div>
     </div>
 </div>

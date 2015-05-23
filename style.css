@@ -54,6 +54,23 @@ article {
 	padding-left: 50px;
 }
 
+/* sidebar styles */
+
+.sidebarTitle {
+	background-color: #1d5b79;
+	text-align: center;
+	padding: 5px;
+	color: #fff;
+}
+
+.center {
+	text-align: center;
+}
+
+.drkblue {
+	color: #0f2f3d;
+}
+
 /*Fonts*/
 
 @font-face {

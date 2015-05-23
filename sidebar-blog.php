@@ -1,23 +1,3 @@
-
-	<style type="text/css">
-
-		.sidebarTitle {
-			background-color: #1d5b79;
-			text-align: center;
-			padding: 5px;
-			color: #fff;
-		}
-
-		.center {
-			text-align: center;
-		}
-
-		.drkblue {
-			color: #0f2f3d;
-		}
-
-	</style>
-
 	<?php if ( ! dynamic_sidebar( 'blog') ): ?>
 
 		<h3 class='sidebarTitle'>Categories</h3>	
