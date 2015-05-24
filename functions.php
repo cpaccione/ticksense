@@ -18,6 +18,7 @@ function theme_js() {
 	$wp_scripts->add_data( 'respond_js', 'conditional', 'lt IE 9' );
 
 	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'theme_js', get_template_directory_uri() . '/js/theme.js', array('jquery', 'bootstrap_js'), '', true );
 
 }
@@ -27,6 +28,11 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 add_theme_support( 'menus' ); // This is to set the custom and dynamic menus
 add_theme_support( 'post-thumbnails' ); // this allows you to set a featured image
+add_image_size('masonry_thumb', 313, 10000, false);
+add_image_size('masonry_1x1', 188, 188, true);
+add_image_size('masonry_1x2', 188, 376, true);
+add_image_size('masonry_2x1', 376, 188, true);
+add_image_size('masonry_2x2', 376, 376, true);
 
 /* FUNCTION TELLS WP WHERE TO PLACE THE MENU AND THAT IS CURRENTLY EXISTS WITHIN THE CMS */
 function register_theme_menus() {
@@ -103,43 +109,43 @@ wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/css/admin.css' )
 add_action('admin_print_styles', 'admin_css' );
 
 // Get Image in post
-function catch_that_image() {
-  global $post, $posts;
-  $first_img = '';
-  ob_start();
-  ob_end_clean();
-  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-  $first_img = $matches[1][0];
+// function catch_that_image() {
+//   global $post, $posts;
+//   $first_img = '';
+//   ob_start();
+//   ob_end_clean();
+//   $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+//   $first_img = $matches[1][0];
 
-  if(empty($first_img)) {
-    $first_img = "/path/to/default.png";
-  }
-  return $first_img;
-}
+//   if(empty($first_img)) {
+//     $first_img = "/path/to/default.png";
+//   }
+//   return $first_img;
+// }
 
-function display_image(){
+// function display_image(){
 
-	$catPost = get_posts(get_cat_ID('Uncategorized'));
+// 	$catPost = get_posts(get_cat_ID('Uncategorized'));
 
-	foreach ($catPost as $post) {
-		if ( get_the_post_thumbnail($post_id) != '' ) {
+// 	foreach ($catPost as $post) {
+// 		if ( get_the_post_thumbnail($post_id) != '' ) {
 
-	      echo '<a href="'; the_permalink(); echo '" class="thumbnail-wrapper">';
-	       the_post_thumbnail();
-	      echo '</a>';
+// 	      echo '<a href="'; the_permalink(); echo '" class="thumbnail-wrapper">';
+// 	       the_post_thumbnail();
+// 	      echo '</a>';
 
-	    } else {
+// 	    } else {
 
-	     echo '<a href="'; the_permalink(); echo '" class="thumbnail-wrapper">';
-	     echo '<img src="';
-	     echo catch_that_image();
-	     echo '" alt="" />';
-	     echo '</a>';
-	    }
+// 	     echo '<a href="'; the_permalink(); echo '" class="thumbnail-wrapper">';
+// 	     echo '<img src="';
+// 	     echo catch_that_image();
+// 	     echo '" alt="" />';
+// 	     echo '</a>';
+// 	    }
 
-	}
+// 	}
 
-}
+// }
 
 
 ?>

@@ -1,10 +1,14 @@
 <?php get_header(); ?>
 
+<h5>Masonry starts here</h5>
+<?php get_template_part('masonry'); ?>
+<h5>Masonry ends here</h5>
+
 
 <div class="row">
     <div class="col-md-12">
         <div class="featured-blogs">
-            <img class="img-responsive center-block" <?php display_image();?>
+            <img class="img-responsive center-block"
         </div>
     </div>
 </div>
