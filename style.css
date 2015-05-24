@@ -71,10 +71,16 @@ article {
 	color: #0f2f3d;
 }
 
+/* banner styles */
+
 .featured-masonry {  }
 .featured-masonry ul { list-style-type: none; padding: 0; margin: 0; }
 .featured-masonry ul li { padding: 0; margin: 0; }
 .featured-masonry ul li img { display: block; }
+
+.spacer {
+	margin: 20px 0;
+}
 
 /*Fonts*/
 
