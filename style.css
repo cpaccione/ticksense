@@ -52,6 +52,7 @@ a {
 article {
 	max-width: 525px;
 	padding-left: 50px;
+	font-size: 1.2em;
 }
 
 .indent {
@@ -78,7 +79,7 @@ article {
 
 /* banner styles */
 
-.featured-masonry {  }
+.featured-masonry { max-height: 376px; overflow: hidden }
 .featured-masonry ul { list-style-type: none; padding: 0; margin: 0; }
 .featured-masonry ul li { padding: 0; margin: 0; }
 .featured-masonry ul li img { display: block;}

@@ -7,6 +7,7 @@ $(window).load(function() {
 	});
 });
 
+//Rollover Banner Titles
 $('.masonry-item a').on('mouseenter', function(){
 	$(this).find('.imagetitle').fadeTo(200, 1);
 });
