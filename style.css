@@ -54,6 +54,10 @@ article {
 	padding-left: 50px;
 }
 
+.indent {
+	margin-left: 25px;
+}
+
 /* sidebar styles */
 
 .sidebarTitle {
@@ -65,6 +69,7 @@ article {
 
 .center {
 	text-align: center;
+	font-size: 1.4em;
 }
 
 .drkblue {
@@ -76,10 +81,24 @@ article {
 .featured-masonry {  }
 .featured-masonry ul { list-style-type: none; padding: 0; margin: 0; }
 .featured-masonry ul li { padding: 0; margin: 0; }
-.featured-masonry ul li img { display: block; }
+.featured-masonry ul li img { display: block;}
 
 .spacer {
 	margin: 20px 0;
+}
+
+.imagetitle {
+		opacity: 0;
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+		margin: auto;
+		background-color: #012b3b;
+		color: #fff;
+		width: 100%;
+		font-family: bodoni;
+		font-size: 1.4em;
+		padding: 0px 2px;
 }
 
 /*Fonts*/

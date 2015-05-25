@@ -1,11 +1,4 @@
-<style type="text/css">
-	.imagetitle {
-		opacity: 0;
-	}
-	.imagetitle:hover {
-		opacity: 1;
-	}
-</style>
+
 <?php
 
 

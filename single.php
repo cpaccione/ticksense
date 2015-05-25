@@ -1,13 +1,8 @@
 <?php get_header(); ?>
 
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="featured-blogs">
-            <img class="img-responsive center-block" src="<?php bloginfo('stylesheet_directory');?>/images/featured_post_placeholder.jpg" alt="featured posts ticksense">
-        </div>
-    </div>
-</div>
+    <?php get_template_part('masonry'); ?>
+    <div class='spacer'>&nbsp;</div>
 
 
     <div class="row">
@@ -17,7 +12,7 @@
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
             <div class="title">
-                <img class="blog-image" src="<?php bloginfo('stylesheet_directory');?>/images/blog_post_logo.png">
+                <img class="blog-image" style='padding-left: 0px' src="<?php bloginfo('stylesheet_directory');?>/images/blog_post_logo.png">
                 <h1 class="blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
             </div>
             <div class="clear"></div>

@@ -7,4 +7,12 @@ $(window).load(function() {
 	});
 });
 
+$('.masonry-item a').on('mouseenter', function(){
+	$(this).find('.imagetitle').fadeTo(200, 1);
+});
+
+$('.masonry-item a').on('mouseleave', function(){
+	$(this).find('.imagetitle').fadeTo(200, 0);
+});
+
 })(jQuery)

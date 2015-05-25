@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
-    <h5>Masonry starts here</h5>
-        <?php get_template_part('masonry'); ?>
-    <h5>Masonry ends here</h5>
+    <?php get_template_part('masonry'); ?>
     <div class='spacer'>&nbsp;</div>
 
 

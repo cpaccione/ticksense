@@ -1,10 +1,12 @@
 <?php get_header(); ?>
 
+    <?php get_template_part('masonry'); ?>
+    <div class='spacer'>&nbsp;</div>
 
     <div class="row">
         <div class="col-md-8">
 
-            <div class="page-header">
+            <div class="page-header" style='margin: 0px 0px 20px'>
               <h1><?php wp_title(''); ?> Blog Posts</h1>
             </div>
 
@@ -37,7 +39,7 @@
 
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4" style='margin-top: 20px;'>
 
     <?php get_sidebar( 'blog' ); ?>
 
